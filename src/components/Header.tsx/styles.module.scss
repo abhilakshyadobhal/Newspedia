@@ -1,0 +1,22 @@
+@import '../../utils/index.scss';
+
+.header {
+  z-index: 10;
+  padding: 30px 0;
+  border-bottom: 1px solid $color-light-black;
+
+  .navbar {
+    width: 90%;
+    margin: auto;
+    max-width: 65rem;
+    display: flex;
+    justify-content: space-between;
+
+    &__logo {
+      font-family: $font-primary;
+      font-size: 25px;
+      font-weight: 600;
+      letter-spacing: 5px;
+    }
+  }
+}
