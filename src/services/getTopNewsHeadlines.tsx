@@ -5,7 +5,7 @@ export const getTopNewHeadLines = async () => {
     country: 'us',
     apiKey: process.env.REACT_APP_API_KEY
   };
-  const res = await axios.get('http://newsapi.org/v2/top-headlines', {
+  const res = await axios.get('https://newsapi.org/v2/top-headlines', {
     params
   });
   return res.data;
