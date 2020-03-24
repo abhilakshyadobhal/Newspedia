@@ -3,4 +3,20 @@
 .footer {
   padding: 30px 0;
   border-top: 1px solid $color-light-black;
+  background: $footer-color;
+  color: $color-white;
+
+  &__content {
+    width: 90%;
+    max-width: 65rem;
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+
+    .coffeeSymbol {
+      margin-left: 5px;
+      font-size: 25px;
+    }
+  }
 }

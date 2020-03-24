@@ -1,3 +1,10 @@
 .main {
-  min-height: 80vh;
+  min-height: 75vh;
+  width: 90%;
+  max-width: 85rem;
+  margin: auto;
+  padding: 25px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
