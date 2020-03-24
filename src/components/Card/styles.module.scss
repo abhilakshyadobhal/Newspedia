@@ -1,3 +1,5 @@
+@import '../../utils/index.scss';
+
 .card {
   position: relative;
   width: 400px;
@@ -19,6 +21,13 @@
     height: 250px;
 
     &__newsInformation {
+      margin-top: 5px;
+      font-size: 14px;
+      .author {
+        padding-right: 5px;
+        border-right: 2px solid $color-light-black;
+        margin-right: 5px;
+      }
     }
 
     &__title {
@@ -27,5 +36,4 @@
       height: 50px;
     }
   }
-
 }

@@ -23,8 +23,7 @@ const Card: React.FC<CardProps> = ({
       ></div>
       <div className={styles.newsData}>
         <div className={styles.newsData__newsInformation}>
-          {author && `${author}`}
-          {author && <span>asda</span>}
+          {author && <span className={styles.author}>{author}</span>}
           {new Date(publishedAt).toLocaleDateString()}
         </div>
         <div className={styles.newsData__title}>{title}</div>
