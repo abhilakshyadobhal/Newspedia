@@ -6,7 +6,6 @@ const Header = () => {
     <header className={styles.header}>
       <nav className={styles.navbar}>
         <div className={styles.navbar__logo}>NewsPedia</div>
-        <div>dasdasf assadf</div>
       </nav>
     </header>
   );

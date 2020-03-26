@@ -1,4 +1,4 @@
-@import '../../utils/index.scss';
+@import '../../styles/utils/index';
 
 .header {
   z-index: 10;
@@ -8,7 +8,7 @@
   .navbar {
     width: 90%;
     margin: auto;
-    max-width: 65rem;
+    max-width: 64rem;
     display: flex;
     justify-content: space-between;
 

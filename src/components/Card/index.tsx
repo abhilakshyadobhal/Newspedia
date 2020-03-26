@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './styles.module.scss';
 import { CardProps } from '../../interfaces/card';
+import styles from './styles.module.scss';
 
 const Card: React.FC<CardProps> = ({
   article,
@@ -26,7 +26,11 @@ const Card: React.FC<CardProps> = ({
           {author && <span className={styles.author}>{author}</span>}
           {new Date(publishedAt).toLocaleDateString()}
         </div>
-        <div className={styles.newsData__title}>{title}</div>
+        <div className={styles.newsData__title}>
+          <a href={url} target='_blank' rel='noopener noreferrer'>
+            {title}
+          </a>
+        </div>
         <div className={styles.newsData__description}>{description}</div>
       </div>
     </div>

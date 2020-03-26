@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { getTopNewHeadLines } from '../../services/getTopNewsHeadlines';
 import Card from '../Card';
 import { CardProps } from '../../interfaces/card';
@@ -11,7 +11,7 @@ const Main = () => {
   const [error, setError] = useState(null);
   const [newsData, setNewsData] = useState([]);
 
-  const fetchNews = async () => {
+  const fetchNews = useCallback(async () => {
     setLoading(true);
     try {
       const res = await getTopNewHeadLines();
@@ -22,13 +22,11 @@ const Main = () => {
     } finally {
       setLoading(false);
     }
-  };
-
-  useEffect(() => console.log(newsData), []);
+  }, []);
 
   useEffect(() => {
     fetchNews();
-  }, []);
+  }, [fetchNews]);
 
   const render = () => {
     if (loading) {
@@ -45,17 +43,21 @@ const Main = () => {
       {newsData &&
         newsData.length > 0 &&
         newsData.map(
-          ({
-            author,
-            title,
-            article,
-            description,
-            url,
-            urlToImage,
-            publishedAt,
-            content
-          }: CardProps) => (
+          (
+            {
+              author,
+              title,
+              article,
+              description,
+              url,
+              urlToImage,
+              publishedAt,
+              content
+            }: CardProps,
+            i: number
+          ) => (
             <Card
+              key={i}
               url={url}
               content={content}
               article={article}

@@ -1,10 +1,9 @@
-@import '../../utils/index.scss';
+@import '../../styles/utils/index';
 
 .card {
   position: relative;
   width: 400px;
   height: 500px;
-  max-height: 500px;
   margin: 25px 20px;
   background: #ffffff;
   border-radius: 10px;
@@ -17,8 +16,13 @@
   }
 
   .newsData {
-    padding: 10px 15px;
+    padding: 2px 15px;
     height: 250px;
+
+    @include breakpoint(mobile) {
+      height: auto;
+      padding: 10px 15px;
+    }
 
     &__newsInformation {
       margin-top: 5px;
@@ -33,7 +37,24 @@
     &__title {
       font-weight: 600;
       margin: 20px 0;
-      height: 50px;
+      height: 60px;
+
+      @include breakpoint(mobile) {
+        height: auto;
+      }
+
+      a {
+        color: $color-black;
+        text-decoration: none;
+        transition: color 0.2s ease-in-out;
+
+        &:hover {
+          color: #137bbf;
+        }
+      }
     }
+  }
+  @include breakpoint(mobile) {
+    height: auto;
   }
 }
