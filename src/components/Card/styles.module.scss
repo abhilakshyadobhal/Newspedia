@@ -3,7 +3,7 @@
 .card {
   position: relative;
   width: 400px;
-  height: 500px;
+  height: auto;
   margin: 25px 20px;
   background: #ffffff;
   border-radius: 10px;
@@ -16,13 +16,8 @@
   }
 
   .newsData {
-    padding: 2px 15px;
-    height: 250px;
-
-    @include breakpoint(mobile) {
-      height: auto;
-      padding: 10px 15px;
-    }
+    padding: 10px 15px;
+    height: auto;
 
     &__newsInformation {
       margin-top: 5px;
@@ -36,7 +31,7 @@
 
     &__title {
       font-weight: 600;
-      margin: 20px 0;
+      margin: 10px 0 20px;
       height: 60px;
 
       @include breakpoint(mobile) {
@@ -54,7 +49,8 @@
       }
     }
   }
+
   @include breakpoint(mobile) {
-    height: auto;
+    width: auto;
   }
 }
