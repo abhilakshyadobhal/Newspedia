@@ -4,7 +4,11 @@
   max-width: 85rem;
   margin: auto;
   padding: 25px 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  &__content {
+    .cardWrapper {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
 }
