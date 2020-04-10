@@ -1,9 +1,24 @@
+@import '../../styles/utils/index';
+
 .main {
   min-height: 75vh;
   width: 90%;
   max-width: 85rem;
   margin: auto;
   padding: 25px 0;
+  .searchFields {
+    display: flex;
+    padding: 0 35px;
+    font-size: 18px;
+    @include breakpoint(tablet) {
+      flex-direction: row;
+      padding: 0 25px;
+      font-size: 16px;
+    }
+    @include breakpoint(mobile) {
+      flex-direction: column;
+    }
+  }
   &__content {
     .cardWrapper {
       display: flex;

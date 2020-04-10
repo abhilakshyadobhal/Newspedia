@@ -14,23 +14,28 @@ const SelectComponent: React.FunctionComponent<SelectComponentProps> = ({
 
   return (
     <React.Fragment>
-      <select
-        onChange={handleChange}
-        defaultValue='disabled'
-        value={value}
-        className={styles.selectDropdown}
-      >
-        <option value='disabled' disabled>
-          Select {title}
-        </option>
-        {field.map(
-          ({ option, value }: { option: string; value: string }, i: number) => (
-            <option value={value} key={i}>
-              {option[0].toUpperCase() + option.slice(1)}
-            </option>
-          )
-        )}
-      </select>
+      <div className={styles.selectWrapper}>
+        <span className={styles.label}>Select {title}</span>
+        <select
+          onChange={handleChange}
+          value={value}
+          className={styles.selectDropdown}
+        >
+          <option value='' disabled>
+            Please select {title}
+          </option>
+          {field.map(
+            (
+              { option, value }: { option: string; value: string },
+              i: number
+            ) => (
+              <option value={value} key={i}>
+                {option[0].toUpperCase() + option.slice(1)}
+              </option>
+            )
+          )}
+        </select>
+      </div>
     </React.Fragment>
   );
 };

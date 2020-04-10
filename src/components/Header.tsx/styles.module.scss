@@ -8,9 +8,14 @@
   .navbar {
     width: 90%;
     margin: auto;
-    max-width: 65rem;
+    max-width: 80rem;
     display: flex;
     justify-content: space-between;
+
+    @include breakpoint(tablet){
+      max-width: 40rem;
+    }
+
 
     &__logo {
       font-family: $font-primary;

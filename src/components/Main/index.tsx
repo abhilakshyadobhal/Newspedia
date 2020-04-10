@@ -7,6 +7,7 @@ import { categories } from '../../data/categories.';
 import Card from '../Card';
 import styles from './styles.module.scss';
 import SelectComponent from '../SelectComponent';
+import { countries } from '../../data/countries';
 
 const Main = () => {
   const [loading, setLoading] = useState(true);
@@ -14,6 +15,7 @@ const Main = () => {
   const [newsData, setNewsData] = useState([]);
   const [params, setParamas] = useState({
     category: '',
+    country: 'in',
   });
 
   const fetchNews = useCallback(async (params: any) => {
@@ -46,11 +48,18 @@ const Main = () => {
         {newsData && newsData.length > 0 && (
           <div className={styles.searchFields}>
             <SelectComponent
-              key='category'
+              key='categories'
               field={categories}
               handleSelectChange={handleSelectChange}
               title='category'
               value={params.category}
+            />
+            <SelectComponent
+              key='countries'
+              field={countries}
+              handleSelectChange={handleSelectChange}
+              title='country'
+              value={params.country}
             />
           </div>
         )}

@@ -50,6 +50,10 @@
     }
   }
 
+  @include breakpoint(tablet){
+    width: 300px;
+  }
+
   @include breakpoint(mobile) {
     width: auto;
   }
