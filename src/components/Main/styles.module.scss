@@ -8,8 +8,12 @@
   padding: 25px 0;
   .searchFields {
     display: flex;
-    padding: 0 35px;
+    padding-left: 210px;
     font-size: 18px;
+
+    @include breakpoint(desktop-m) {
+      padding-left: 60px;
+    }
     @include breakpoint(tablet) {
       flex-direction: row;
       padding: 0 25px;
@@ -25,5 +29,9 @@
       justify-content: center;
       flex-wrap: wrap;
     }
+  }
+
+  @include breakpoint(mobile) {
+    min-height: 70vh;
   }
 }

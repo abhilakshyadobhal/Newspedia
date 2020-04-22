@@ -6,16 +6,19 @@
   border-bottom: 1px solid $color-light-black;
 
   .navbar {
-    width: 90%;
+    width: 67%;
     margin: auto;
     max-width: 80rem;
     display: flex;
     justify-content: space-between;
 
-    @include breakpoint(tablet){
-      max-width: 40rem;
+    @include breakpoint(tablet) {
+      width: 84%;
     }
 
+    @include breakpoint(mobile) {
+      width: 80%;
+    }
 
     &__logo {
       font-family: $font-primary;
